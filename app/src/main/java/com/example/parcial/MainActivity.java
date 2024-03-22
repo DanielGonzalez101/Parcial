@@ -30,11 +30,11 @@ public class MainActivity extends AppCompatActivity {
         if (edtUsuario.getText().toString().isEmpty() || edtConstrasena.getText().toString().isEmpty()) {
             Toast.makeText(this, "Porfavor llenar los campos", Toast.LENGTH_SHORT).show();
         } else if (edtUsuario.getText().toString().equals("uac123") || edtConstrasena.getText().toString().equals("12345678")) {
-            Toast.makeText(this, "Datos incorrectos", Toast.LENGTH_SHORT).show();
-        }else {
             // Aqui va la funcion para ir a la otra pantalla
             Intent validado = new Intent(this, segundaPantalla.class);
             startActivity(validado);
+        }else {
+            Toast.makeText(this, "Datos incorrectos", Toast.LENGTH_SHORT).show();
         }
     }
 
